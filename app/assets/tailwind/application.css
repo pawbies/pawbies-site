@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+    --color-pastel-pink: #f7c9f2;
+    --color-pastel-purple: #e0c9f7;
+    --color-pastel-violet: #d5c3fa;
+    --color-pastel-blue: #c2dafd;
+    --color-pastel-cyan: #c8f4ff;
+}

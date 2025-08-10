@@ -1,0 +1,14 @@
+<footer class="bg-pastel-violet text-center md:text-left font-[Comic_Relief] py-6 mt-12">
+  <div class="container mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
+    <div class="mb-4 md:mb-0">
+      <%= t(".copyright") %> @ Pawbies 2025 - <%= Time.current.year %>
+    </div>
+
+    <div class="flex space-x-4 items-center">
+      <%= link_to t(".privacy"), root_path %>
+      <%= link_to t(".imprint"), root_path %>
+      <a href="https://instagram.com/fpawbies"><%= image_tag "social/instagram.svg", class: "aspect-square h-[2em]" %></a>
+      <a href="https://github.com/pawbies"><%= image_tag "social/github.svg", class: "aspect-square h-[2em]" %></a>
+    </div>
+  </div>
+</footer>

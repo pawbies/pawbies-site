@@ -1,0 +1,27 @@
+<header class="bg-pastel-purple w-screen h-24 font-[Comic_Relief]">
+  <%# Desktop %>
+  <nav class="hidden mx-auto w-2/3 h-full md:flex items-center justify-around">
+      <%= link_to t(".homepage"), root_path, class: "text-2xl font-semibold #{"italic" if current_page?(root_path)}" %>
+      <%= link_to t(".about"), about_path, class: "text-2xl font-semibold #{"italic" if current_page?(about_path)}" %>
+      <%= link_to t(".contact"), contact_path, class: "text-2xl font-semibold #{"italic" if current_page?(contact_path)}" %>
+  </nav>
+
+  <%# Mobile %>
+  <div data-controller="header" class="w-full h-full">
+    <div class="md:hidden flex items-center justify-between px-5 h-full">
+      <%= link_to "Logo", root_path, class: "text-xl font-bold" %>
+
+      <button data-action="header#toggleMobileNav" class="p-2 rounded bg-pastel-violet">
+      ☰
+      </button>
+    </div>
+
+    <div data-header-target="mobileNav" class="hidden absolute top-24 left-0 w-full bg-pastel-violet shadow-lg z-50">
+      <nav class="flex flex-col items-center py-5 space-y-4 text-xl">
+        <%= link_to t(".homepage"), root_path %>
+        <%= link_to t(".about"), about_path %>
+        <%= link_to t(".contact"), contact_path %>
+      </nav>
+    </div>
+  </div>
+</header>
