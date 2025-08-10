@@ -1,0 +1,41 @@
+en:
+  pages:
+    imprint:
+      title: "Imprint"
+      subtitle: "Information according to § 5 ECG / provider identification"
+      provider:
+        heading: "Service Provider"
+        name: "Alexander Fuchs"
+        address_line1: "Straße"
+        address_line2: "6969 Irgendwo"
+        country: "Austria"
+        represented_by: "Represented by: Alexander Fuchs"
+        contact:
+          phone_label: "Phone:"
+          phone: "+43 420 6969696"
+          email_label: "Email:"
+          email: "wirelesscontroller48@gmail.com"
+          website_label: "Website:"
+      registration:
+        heading: "Registration & Regulatory"
+        company_number: "Company Register (FN): 123456a, Commercial Court of Vienna"
+        vat_id: "VAT ID (UID): ATU12345678"
+        supervisory: "Supervisory authority: Municipal District Office for the 1st/8th District"
+        chamber: "Member of the Austrian Federal Economic Chamber (WKO)"
+      responsibility:
+        heading: "Content Responsibility"
+        text: "Responsible for the content of this website in accordance with § 55 Abs. 2 RStV / § 24 MedienG: Your Name, address as above."
+      dispute:
+        heading: "EU Online Dispute Resolution"
+        portal_name: "ODR platform"
+        text_html: "Consumers have the possibility to submit complaints to the %{link}. We are not obliged nor willing to participate in dispute settlement proceedings before a consumer arbitration board."
+      liability:
+        heading: "Liability for Content & Links"
+        content: "We constantly review and update the information on this website. Nevertheless, no liability can be accepted for correctness, completeness and timeliness."
+        links: "Despite careful control of the content, we assume no liability for external links. The operators of the linked pages are solely responsible for their content."
+      copyright:
+        heading: "Copyright"
+        text: "All content and works on these pages are subject to copyright. Reproduction, processing, distribution or any form of commercialization requires prior written consent."
+      image_credits: "Image credits: Your sources (e.g., own photos, Unsplash)."
+      privacy_link_text: "Privacy Policy"
+      last_updated: "Last updated:"

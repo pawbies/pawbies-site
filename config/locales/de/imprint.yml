@@ -1,0 +1,41 @@
+de:
+  pages:
+    imprint:
+      title: "Impressum"
+      subtitle: "Informationspflicht gemäß § 5 ECG / Anbieterkennzeichnung"
+      provider:
+        heading: "Diensteanbieter"
+        name: "Alexander Fuchs"
+        address_line1: "Straße"
+        address_line2: "6969 Irgendwo"
+        country: "Österreich"
+        represented_by: "Vertreten durch: Alexander Fuchs"
+        contact:
+          phone_label: "Telefon:"
+          phone: "+43 420 6969696"
+          email_label: "E-Mail:"
+          email: "wirelesscontroller48@gmail.com"
+          website_label: "Webseite:"
+      registration:
+        heading: "Firmen- & Behördenangaben"
+        company_number: "Firmenbuchnummer (FN): 123456a, Handelsgericht Wien"
+        vat_id: "UID-Nummer: ATU12345678"
+        supervisory: "Zuständige Aufsichtsbehörde: Magistratisches Bezirksamt für den 1./8. Bezirk"
+        chamber: "Mitglied der Wirtschaftskammer Österreich (WKO)"
+      responsibility:
+        heading: "Inhaltliche Verantwortung"
+        text: "Medieninhaber und inhaltlich verantwortlich gemäß § 24 MedienG / § 55 Abs. 2 RStV: Dein Name, Anschrift wie oben."
+      dispute:
+        heading: "EU-Streitbeilegung"
+        portal_name: "OS-Plattform"
+        text_html: "Verbraucher haben die Möglichkeit, Beschwerden an die %{link} zu richten. Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+      liability:
+        heading: "Haftung für Inhalte & Links"
+        content: "Die Inhalte dieser Website werden mit größter Sorgfalt erstellt, dennoch kann keine Gewähr für Richtigkeit, Vollständigkeit und Aktualität übernommen werden."
+        links: "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für externe Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich."
+      copyright:
+        heading: "Urheberrecht"
+        text: "Alle Inhalte und Werke auf diesen Seiten unterliegen dem Urheberrecht. Jede Verwertung bedarf der vorherigen schriftlichen Zustimmung."
+      image_credits: "Bildnachweise: Deine Quellen (z. B. eigene Fotos, Unsplash)."
+      privacy_link_text: "Datenschutzerklärung"
+      last_updated: "Letzte Aktualisierung:"

@@ -1,0 +1,71 @@
+<div class="w-full font-[Comic_Relief]">
+  <section class="py-14 text-center">
+    <h1 class="text-4xl font-bold mb-2"><%= t(".title") %></h1>
+    <p class="text-lg"><%= t(".subtitle") %></p>
+  </section>
+
+  <section class="py-10 px-6 md:px-16">
+    <div class="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed">
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".provider.heading") %></h2>
+        <p>
+          <%= t(".provider.name") %><br>
+          <%= t(".provider.address_line1") %><br>
+          <%= t(".provider.address_line2") %><br>
+          <%= t(".provider.country") %>
+        </p>
+        <p class="mt-3">
+          <%= t(".provider.represented_by") %><br>
+          <%= t(".provider.contact.phone_label") %> <%= t(".provider.contact.phone") %><br>
+          <%= t(".provider.contact.email_label") %>
+          <%= mail_to t(".provider.contact.email") %><br>
+          <%= t(".provider.contact.website_label") %>
+          <%= link_to t(".provider.contact.website"), root_path %>
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".registration.heading") %></h2>
+        <ul class="list-disc pl-6 space-y-1">
+          <li><%= t(".registration.company_number") %></li>
+          <li><%= t(".registration.vat_id") %></li>
+          <li><%= t(".registration.supervisory") %></li>
+          <li><%= t(".registration.chamber") %></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".responsibility.heading") %></h2>
+        <p><%= t(".responsibility.text") %></p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".dispute.heading") %></h2>
+        <p>
+          <%= t(".dispute.text_html",
+                link: link_to(t('.dispute.portal_name'), "https://ec.europa.eu/consumers/odr", target: "_blank", rel: "noopener")) %>
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".liability.heading") %></h2>
+        <p class="mb-3"><%= t(".liability.content") %></p>
+        <p><%= t(".liability.links") %></p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2"><%= t(".copyright.heading") %></h2>
+        <p class="mb-3"><%= t(".copyright.text") %></p>
+        <p><%= t(".image_credits") %></p>
+      </div>
+
+      <div class="pt-2">
+        <%= link_to t(".privacy_link_text"), privacy_path, class: "underline" %>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-pastel-pink py-6 text-center">
+    <p><%= t(".last_updated") %> 2025-08-10</p>
+  </section>
+</div>
