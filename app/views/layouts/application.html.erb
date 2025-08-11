@@ -27,6 +27,43 @@
     <meta name="twitter:description" content="The personal homepage of none other than the legendary Pawbies aka Alexander Fuchs.">
     <meta name="twitter:image" content="<%= asset_path("femboy/socks.jpg") %>">
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pawbies",
+        "url": "<%= root_url %>",
+        "description": "The personal homepage of none other than the legendary Pawbies aka Alexander Fuchs.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Alexander Fuchs",
+          "url": "https://pawbies.net/"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alexander Fuchs",
+        "url": "<%= root_url %>",
+        "image": "<%= asset_path("femboy/socks.jpg") %>",
+        "knowsAbout": [
+          "Ruby on Rails",
+          "Laravel",
+          "MySQL",
+          "C++",
+          "Azure",
+          "Fitness"
+        ],
+        "sameAs": [
+          "https://github.com/pawbies",
+          "https://www.instagram.com/fpawbies"
+        ]
+      }
+    </script>
+
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
