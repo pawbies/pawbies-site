@@ -1,4 +1,16 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#contact</h1>
-  <p>Find me in app/views/pages/contact.html.erb</p>
+<div class="mx-auto">
+  <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]">Contact</h1>
+  <p class="text-2xl lg:text-center"><%= t(".you_can_contact_me") %></p>
+
+  <div class="mt-6 w-full md:w-3/4 md:mx-auto flex flex-col md:flex-row md:justify-between items-center">
+    <div class="flex flex-col items-center">
+      <h2 class="text-2xl">Instagram</h2>
+      <blockquote class="instagram-media w-1/2 aspect-[1/10.75]" data-instgrm-permalink="https://www.instagram.com/p/DAEd5pGxfc9/" data-instgrm-version="14"></blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </div>
+    <div class="flex flex-col items-center md:w-1/2">
+      <%= image_tag "arrow_black.svg", class: "mt-6 w-1/4 md:w-1/2 transform rotate-330 md:rotate-350 md:scale-x-[-1]" %>
+      <strong class="mt-2 text-2xl text-center"><%= t(".follow_me_on_instagram") %></strong>
+    </div>
+  </div>
 </div>
