@@ -1,4 +1,108 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#about</h1>
-  <p>Find me in app/views/pages/about.html.erb</p>
+<div class="mx-auto">
+  <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]"><%= t(".about_me") %></h1>
+
+  <section class="relative mt-18 flex flex-col lg:w-1/2 lg:mx-auto">
+    <span class="text-2xl lg:text-3xl"><%= t(".hey") %></span>
+    <div class="absolute top-18 lg:top-24 right-8 w-16 lg:w-32 h-24 z-10 flex flex-col items-center">
+      <span class="text-2xl text-red-400 text-center"><%= t(".this_is_me") %></span>
+      <%= image_tag "arrow.svg", alt: t(".arrow_alt"), width: 84, height: 150, class: "w-2/3 transform rotate-180" %>
+    </div>
+    <%= image_tag "femboy/socks.jpg",
+      loading: "eager",
+      fetchpriority: "high",
+      width: 1080, height: 720,
+      alt: t(".socks_alt"),
+      class: "mt-2 rounded-sm drop-shadow-md drop-shadow-pastel-blue mx-auto" %>
+  </section>
+
+  <nav class="mt-4 text-center">
+    <h2 class="text-xl"><%= t(".skip_to_topic") %></h2>
+    <ul>
+      <li class="text-lg text-blue-400 underline"><a href="#gym"><%= t(".gym") %></a></li>
+      <li class="text-lg text-blue-400 underline"><a href="#femboy"><%= t(".femboy") %></a></li>
+      <li class="text-lg text-blue-400 underline"><a href="#programming"><%= t(".programming") %></a></li>
+    </ul>
+  </nav>
+
+  <section id="gym" class="mt-24 flex flex-col lg:w-1/2 lg:mx-auto">
+    <h2 class="text-3xl mx-auto md:mx-0"><%= t(".gym_heading") %></h2>
+    <p class="mt-2 text-lg"><%= t(".i_like_going_to_the_gym") %></p>
+    <div class="mt-4 grid grid-col-1 md:grid-cols-3 gap-2">
+      <div class="aspect-[2/2.5] mx-auto w-2/3 md:w-full p-3 bg-pastel-violet drop-shadow-md drop-shadow-pastel-purple rounded-md flex flex-col items-center">
+        <%= image_tag "gym/bench.png", alt: t(".bench_press_alt"), loading: "lazy", class: "max-h-52" %>
+        <h3 class="text-2xl"><%= t(".bench_press") %></h3>
+        <ul class="mt-2">
+          <li><%= t(".orm") %> 117kg</li>
+          <li><%= t(".heaviest_weight") %> 100kg</li>
+        </ul>
+      </div>
+      <div class="aspect-[2/2.5] mx-auto w-2/3 md:w-full p-3 bg-pastel-violet drop-shadow-md drop-shadow-pastel-purple rounded-md flex flex-col items-center">
+        <%= image_tag "gym/deadlift.png", alt: t(".deadlift_alt"), loading: "lazy", class: "max-h-52" %>
+        <h3 class="text-2xl"><%= t(".deadlift") %></h3>
+        <ul class="mt-2">
+          <li><%= t(".orm") %> 191kg</li>
+          <li><%= t(".heaviest_weight") %> 170kg</li>
+        </ul>
+      </div>
+      <div class="aspect-[2/2.5] mx-auto w-2/3 md:w-full p-3 bg-pastel-violet drop-shadow-md drop-shadow-pastel-purple rounded-md flex flex-col items-center">
+        <%= image_tag "gym/squat.png", alt: t(".squat_alt"), loading: "lazy", class: "max-h-52" %>
+        <h3 class="text-2xl"><%= t(".squat") %></h3>
+        <ul class="mt-2">
+          <li><%= t(".orm") %> 154kg</li>
+          <li><%= t(".heaviest_weight") %> 115kg</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="mt-8 mx-auto text-xl text-red-400 text-center"><%= t(".pictures_coming_soon") %></h3>
+
+    <div class="mt-8 flex flex-col md:flex-row lg:flex-col items-center">
+      <h3 class="text-xl text-center"><%= t(".please_follow_me_on_hevy") %> <a href="https://hevy.com/user/pawbies" class="text-lg text-blue-400 underline"><%= t(".my_profile") %></a></h3>
+      <%= image_tag "gym/hevy_profile.png", alt: t(".hevy_profile_alt"), width: 446, height: 338, class: "mt-2 rounded-md" %>
+    </div>
+  </section>
+
+  <section id="femboy" class="mt-24 flex flex-col lg:w-1/2 lg:mx-auto">
+    <h2 class="text-3xl mx-auto md:mx-0"><%= t(".femboy_heading") %></h2>
+    <p class="mt-2 text-lg"><%= t(".i_also_like") %></p>
+    <%= image_tag "femboy/lying.jpg", alt: t(".femboy_lying_alt"), width: 810, height: 540, class: "rounded-md drop-shadow-md drop-shadow-pastel-blue" %>
+    <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-2">
+      <%= image_tag "femboy/normal.png",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/hehe.png",      alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/lying2.png",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/portrait.png",  alt: t(".femboy_picture"), loading: "lazy", width: 358, height: 357, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/sitting.png",   alt: t(".femboy_picture"), loading: "lazy", width: 249, height: 249, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/slutty.png",    alt: t(".femboy_picture"), loading: "lazy", width: 227, height: 227, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+    </div>
+    <span><%= t(".some_pics_where_made_by") %> <a href="https://instagram.com/onlymen.photos" class="text-blue-400 underline">Only Men Photos</a> <%= t(".check_him_out") %></span>
+  </section>
+
+  <section id="programming" class="mt-24 flex flex-col lg:w-1/2 lg:mx-auto">
+    <h2 class="text-3xl mx-auto md:mx-0"><%= t(".programming_heading") %></h2>
+    <p class="mt-2 text-lg"><%= t(".i_sometimes_to_a_little_programming") %></p>
+    <ul class="mt-4">
+      <li class="my-3 flex items-center flex-col">
+        <%= image_tag "programming/rails.svg", alt: "Ruby on Rails Logo", width: 300, height: 113, loading: "lazy", class: "w-1/2" %>
+        <p><%= t(".rails_text") %></p>
+      </li>
+      <li class="my-3 flex items-center flex-col">
+        <%= image_tag "programming/php.svg", alt: "PHP Logo", width: 711, height: 384, loading: "lazy", class: "w-1/2" %>
+        <p><%= t(".php_text") %></p>
+      </li>
+      <li class="my-3 flex items-center flex-col">
+        <%= image_tag "programming/mysql.svg", alt: "MySQL Logo", width: 1024, height: 710, loading: "lazy", class: "w-1/2" %>
+        <p><%= t(".mysql_text") %></p>
+      </li>
+      <li class="my-3 flex items-center flex-col">
+        <%= image_tag "programming/azure.svg", alt: "Azure Logo", width: 200, height: 58, loading: "lazy", class: "w-1/2" %>
+        <p><%= t(".azure_text") %></p>
+      </li>
+      <li class="my-3 flex items-center flex-col">
+        <%= image_tag "programming/cpp.svg", alt: "C++ Logo", width: 306, height: 344, loading: "lazy", class: "w-1/3" %>
+        <p><%= t(".cpp_text") %></p>
+      </li>
+    </ul>
+
+    <p class="mt-8 text-lg"><%= t(".i_also_know_some_other_things") %></p>
+  </section>
 </div>
