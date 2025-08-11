@@ -1,21 +1,21 @@
-<footer class="relative bg-pastel-violet text-center md:text-left font-[Comic_Relief] py-6 mt-12">
-  <div class="container mx-auto px-5 flex flex-col md:flex-row items-center justify-between">
+<footer class="relative bg-pastel-violet text-center md:text-left font-[Comic_Relief] px-5 py-6 mt-12 flex flex-col md:flex-row items-center justify-between">
     <div class="mb-4 md:mb-0">
-      <%= t(".copyright") %> @ Pawbies 2025 - <%= Time.current.year %>
+      <%= t(".copyright") %> @ Pawbies <%= Time.current.year %>
     </div>
 
-    <div class="flex space-x-4 items-center">
-      <%= link_to t(".privacy"), privacy_path %>
-      <%= link_to t(".imprint"), imprint_path %>
-      <a href="https://instagram.com/fpawbies"><%= image_tag "social/instagram.svg", alt: "Instagram Logo", class: "aspect-square h-[2em]" %></a>
-      <a href="https://github.com/pawbies"><%= image_tag "social/github.svg", alt: "GitHub Logo", class: "aspect-square h-[2em]" %></a>
-    </div>
-  </div>
+    <div class="flex">
+      <div class="flex space-x-4 items-center">
+        <%= link_to t(".privacy"), privacy_path %>
+        <%= link_to t(".imprint"), imprint_path %>
+        <a href="https://instagram.com/fpawbies"><%= image_tag "social/instagram.svg", alt: "Instagram Logo", class: "aspect-square h-[2em]" %></a>
+        <a href="https://github.com/pawbies"><%= image_tag "social/github.svg", alt: "GitHub Logo", class: "aspect-square h-[2em]" %></a>
+      </div>
 
-  <%= form_with url: request.path, method: :get, local: true, class: "absolute right-3 bottom-3" do %>
-    <%= select_tag :locale,
-      options_for_select([['🇩🇪 DE', 'de'], ['🇬🇧 EN', 'en']], I18n.locale),
-      onchange: "this.form.submit()",
-      class: "rounded border bg-pastel-cyan px-2 py-1 font-[Comic_Relief] cursor-pointer" %>
-  <% end %>
+      <%= form_with url: request.path, method: :get, local: true, class: "ml-3" do %>
+        <%= select_tag :locale,
+          options_for_select([['🇩🇪 DE', 'de'], ['🇬🇧 EN', 'en']], I18n.locale),
+          onchange: "this.form.submit()",
+          class: "rounded border bg-pastel-cyan px-2 py-1 font-[Comic_Relief] cursor-pointer" %>
+      <% end %>
+    </div>
 </footer>
