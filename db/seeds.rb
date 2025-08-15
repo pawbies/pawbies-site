@@ -10,7 +10,7 @@
 
 [
   { email_address: "alex.fuchs970@gmail.com", password: "alexander", role: "alex" },
-  { email_address: "test@test.com", password: "test", role: "user" }
+  { email_address: "test@test.com", password: "test", role: "normal" }
 ].each do |user|
   User.find_or_create_by(email_address: user[:email_address]) do |u|
     u.password = user[:password]
