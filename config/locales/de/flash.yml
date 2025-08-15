@@ -1,0 +1,5 @@
+en:
+  partials:
+    flash:
+      info: "Info"
+      warning: "Warnung"

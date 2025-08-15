@@ -1,13 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
-      /* Email styles need to be inline */
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f7c9f2; /* pastel pink */
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+
+      .email-wrapper {
+        max-width: 600px;
+        margin: 24px auto;
+        background: white;
+        border: 1px solid #e0c9f7; /* pastel purple */
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .email-header {
+        background: #e0c9f7; /* pastel purple */
+        padding: 20px;
+        text-align: center;
+      }
+
+      .email-header h1 {
+        font-size: 28px;
+        margin: 0;
+        color: #2b2b2b;
+      }
+
+      .email-header p {
+        margin: 8px 0 0;
+        font-size: 14px;
+        color: #2b2b2b;
+      }
+
+      .email-body {
+        padding: 24px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #1f2937;
+      }
+
+      .email-footer {
+        background: #f7f5ff;
+        padding: 16px;
+        font-size: 12px;
+        text-align: center;
+        color: #4b5563;
+        border-top: 1px solid #eae6ff;
+      }
+
+      a {
+        color: #6b7280;
+        text-decoration: underline;
+      }
     </style>
   </head>
-
   <body>
-    <%= yield %>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" class="email-wrapper" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="email-header">
+                <h1>Pawbies</h1>
+                <p><%= t(".tagline") %></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-body">
+                <%= yield %>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-footer">
+                <%= t(".footer") %> • <a href="<%= root_url %>">pawbies.net</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

@@ -1,0 +1,34 @@
+<div class="mx-auto">
+  <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]">Login</h1>
+
+  <%= form_with url: session_url, class: "mt-18 mx-auto md:w-2/3" do |form| %>
+    <div class="my-5">
+      <%= form.email_field :email_address,
+        required: true,
+        autofocus: true,
+        autocomplete: "username",
+        placeholder: t(".email_placeholder"),
+        value: params[:email_address],
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.password_field :password,
+        required: true,
+        autocomplete: "current-password",
+        placeholder: t(".password_placeholder"),
+        maxlength: 72,
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+      <div class="inline">
+        <%= form.submit t(".sign_in"), class: "w-full sm:w-auto text-center rounded-xl px-6 py-3 bg-purple-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
+      </div>
+
+      <div class="mt-4 text-sm text-gray-500 sm:mt-0">
+        <%= link_to t(".forgot_password"), new_password_path, class: "text-blue-400 underline" %>
+      </div>
+    </div>
+  <% end %>
+</div>

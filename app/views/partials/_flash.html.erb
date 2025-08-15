@@ -1,0 +1,25 @@
+<div class="absolute z-50 top-24 left-1/2 transform -translate-x-1/2 w-3/4">
+  <% if notice %>
+    <div data-controller="flash" class="my-4 p-3 bg-pastel-violet rounded-xl drop-shadow-md drop-shadow-pastel-violet">
+      <div class="flex items-center justify-between pb-2 border-b">
+        <span class="text-lg font-semibold"><%= t(".info") %></span>
+        <button data-action="flash#close" class="cursor-pointer">
+          <%= image_tag "icons/close.svg", class: "aspect-square h-[2em]" %>
+        </button>
+      </div>
+      <p class="mt-3 text-lg"><%= notice %></p>
+    </div>
+  <% end %>
+
+  <% if alert %>
+    <div data-controller="flash" class="my-4 p-3 bg-pastel-violet border-2 border-red-300 rounded-xl drop-shadow-md drop-shadow-red-300">
+      <div class="flex items-center justify-between pb-2 border-b">
+        <span class="text-lg font-semibold"><%= t(".warning") %></span>
+        <button data-action="flash#close" class="cursor-pointer">
+          <%= image_tag "icons/close.svg", class: "aspect-square h-[2em]" %>
+        </button>
+      </div>
+      <p class="mt-3 text-lg"><%= alert %></p>
+    </div>
+  <% end %>
+</div>

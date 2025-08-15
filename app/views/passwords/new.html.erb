@@ -1,0 +1,13 @@
+<div class="mx-auto w-full">
+  <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]"><%= t(".forgot_your_password") %></h1>
+
+  <%= form_with url: passwords_path, class: "mt-18 mx-auto md:w-2/3" do |form| %>
+    <div class="my-5">
+      <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: t(".email_placeholder"), value: params[:email_address], class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="inline">
+      <%= form.submit t(".email_reset_instructions"), class: "w-full sm:w-auto text-center rounded-xl px-6 py-3 bg-purple-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+  <% end %>
+</div>

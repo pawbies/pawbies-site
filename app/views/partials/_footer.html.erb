@@ -7,6 +7,11 @@
       <div class="flex space-x-4 items-center">
         <%= link_to t(".privacy"), privacy_path %>
         <%= link_to t(".imprint"), imprint_path %>
+        <% unless authenticated? %>
+          <%= link_to "Login", new_session_path %>
+        <% else %>
+          <%= button_to "Logout", session_path, method: :delete, class: "hover:cursor-pointer" %>
+        <% end %>
         <a href="https://instagram.com/fpawbies"><%= image_tag "social/instagram.svg", alt: "Instagram Logo", class: "aspect-square h-[2em]" %></a>
         <a href="https://github.com/pawbies"><%= image_tag "social/github.svg", alt: "GitHub Logo", class: "aspect-square h-[2em]" %></a>
       </div>

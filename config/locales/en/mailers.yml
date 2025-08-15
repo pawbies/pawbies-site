@@ -1,0 +1,12 @@
+en:
+  layouts:
+    mailer:
+      tagline: "The cool femboy page 💖"
+      footer: "With ❤ from Alex"
+
+  passwords_mailer:
+    reset:
+      subject: "Reset your password"
+      body_html: "You can reset your password within the next 15 minutes on %{link}."
+      link_text: "this password reset page"
+      body_txt: "You can reset your password within the next 15 minutes on this password reset page:"

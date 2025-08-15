@@ -1,0 +1,12 @@
+en:
+  sessions:
+    try_again_later: "Try again later."
+
+    new:
+      email_placeholder: "Enter your email address"
+      password_placeholder: "Enter your password"
+      sign_in: "Sign in"
+      forgot_password: "Forgot password?"
+
+    create:
+      try_another_email: "Try another email address or password."
