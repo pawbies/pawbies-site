@@ -6,7 +6,6 @@ class User < ApplicationRecord
   validates :email_address, presence: true, uniqueness: true
   validates :firstname, presence: true, length: { maximum: 50 }
   validates :lastname, presence: true, length: { maximum: 50 }
-  validate :pfp_type
 
   enum :role, { normal: 0, censored: 1, bf: 2, alex: 3 }
 
@@ -23,18 +22,4 @@ class User < ApplicationRecord
   def full_name
     "#{firstname} #{lastname}"
   end
-
-  private
-    def pfp_type
-      return unless pfp.attached?
-
-      if pfp.byte_size > 5.megabytes
-        errors.add("pfp", :pfp_too_big)
-      end
-
-      types = %w[image/png image/jpeg image/webp image/gif]
-      unless types.include?(pfp.content_type)
-        errors.add(:pfp, :wrong_type)
-      end
-    end
 end

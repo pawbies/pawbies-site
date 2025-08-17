@@ -1,9 +1,0 @@
-en:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            pfp:
-              wrong_type: "must be a PNG, JPG, GIF or WEBP"
-              pfp_too_big: "is too big (max 5MB)"

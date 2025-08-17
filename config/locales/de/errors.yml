@@ -62,12 +62,3 @@ de:
       unsupported: " wird nicht unterstützt."
       inclusion: " ist kein valider Wert."
       record_invalid: "Eintrag invalide."
-
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            pfp:
-              wrong_type: "muss PNG, JPG, GIF oder WEBP sein"
-              pfp_too_big: "ist zu groß (max 5MB)"

@@ -1,6 +1,6 @@
 <div class="mx-auto">
   <%= form_with model: @user do |form| %>
-    <%= image_tag @user.pfp.presence || "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto border w-54 md:w-64 aspect-square rounded-full bg-white" %>
+    <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto border w-54 md:w-64 aspect-square rounded-full bg-white" %>
 
     <% if @user.errors.any? %>
       <ul class="my-5 text-red-500 text-lg">
@@ -10,7 +10,6 @@
       </ul>
     <% end %>
 
-    <%= form.file_field :pfp, accept: "image/png,image/jpeg,image/gif,image/webp", class: "mt-16 text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
     <%= form.text_field :firstname, required: true, placeholder: t(".firstname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
     <%= form.text_field :lastname, required: true, placeholder: t(".lastname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
     <%= form.email_field :email_address, required: true, placeholder: t(".email_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
