@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :firstname, presence: true, length: { maximum: 50 }
   validates :lastname, presence: true, length: { maximum: 50 }
 
-  enum :role, { normal: 0, censored: 1, bf: 2, alex: 3 }
+  enum :role, { normal: 0, bf: 2, alex: 3 }
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 

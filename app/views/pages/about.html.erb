@@ -7,7 +7,7 @@
       <span class="text-2xl text-red-400 text-center"><%= t(".this_is_me") %></span>
       <%= image_tag "arrow.svg", alt: t(".arrow_alt"), width: 84, height: 150, class: "w-1/3 transform rotate-180" %>
     </div>
-    <%= image_tag censor? ? "default/censor.webp" : "femboy/socks.webp",
+    <%= image_tag "femboy/socks.webp",
       loading: "eager",
       fetchpriority: "high",
       width: 1080, height: 720,
@@ -65,14 +65,14 @@
   <section id="femboy" class="mt-24 flex flex-col lg:w-1/2 lg:mx-auto">
     <h2 class="text-3xl mx-auto md:mx-0"><%= t(".femboy_heading") %></h2>
     <p class="mt-2 text-lg"><%= t(".i_also_like") %></p>
-    <%= image_tag censor? ? "default/censor.webp" : "femboy/lying.webp", alt: t(".femboy_lying_alt"), width: 810, height: 540, class: " aspect-[3/2] rounded-md drop-shadow-md drop-shadow-pastel-blue" %>
+    <%= image_tag "femboy/lying.webp", alt: t(".femboy_lying_alt"), width: 810, height: 540, class: " aspect-[3/2] rounded-md drop-shadow-md drop-shadow-pastel-blue" %>
     <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-2">
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/normal.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/hehe.webp",      alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/lying2.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/portrait.webp",  alt: t(".femboy_picture"), loading: "lazy", width: 358, height: 357, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/sitting.webp",   alt: t(".femboy_picture"), loading: "lazy", width: 249, height: 249, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
-      <%= image_tag censor? ? "default/censor.webp" : "femboy/slutty.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 227, height: 227, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/normal.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/hehe.webp",      alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/lying2.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 232, height: 232, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/portrait.webp",  alt: t(".femboy_picture"), loading: "lazy", width: 358, height: 357, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/sitting.webp",   alt: t(".femboy_picture"), loading: "lazy", width: 249, height: 249, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
+      <%= image_tag "femboy/slutty.webp",    alt: t(".femboy_picture"), loading: "lazy", width: 227, height: 227, class: "aspect-square w-full h-full rounded-sm drop-shadow-sm drop-shadow-pastel-violet" %>
     </div>
     <span><%= t(".some_pics_where_made_by") %> <a href="https://instagram.com/onlymen.photos" class="text-blue-400 underline">Only Men Photos</a> <%= t(".check_him_out") %></span>
   </section>

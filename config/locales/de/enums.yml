@@ -3,6 +3,5 @@ de:
     user:
       role:
         normal: "Normal"
-        censored: "Zensiert"
         bf: "Freund"
         alex: "Alex"

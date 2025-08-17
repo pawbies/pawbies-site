@@ -7,13 +7,6 @@ normal_user:
   password_digest: <%= password_digest %>
   role: normal
 
-censored_user:
-  email_address: censored@example.com
-  firstname: Otto
-  lastname: Normal
-  password_digest: <%= password_digest %>
-  role: censored
-
 bf_user:
   email_address: bf@example.com
   firstname: Otto
