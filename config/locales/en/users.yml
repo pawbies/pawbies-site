@@ -1,0 +1,14 @@
+en:
+  users:
+    index:
+      users: "Users"
+      email: "Email"
+      type: "Type"
+      actions: "Actions"
+      show_profile: "Show Profile"
+      edit_profile: "Edit Profile"
+      roles:
+        alex: "Alex"
+        bf: "Boyfriend"
+        normal: "Normal"
+        censored: "Censored"

@@ -1,0 +1,5 @@
+en:
+  partials:
+    sidebar:
+      homepage: "Homepage"
+      users: "Users"

@@ -1,0 +1,37 @@
+<!-- app/views/partials/_sidebar.html.erb -->
+<aside data-controller="sidebar" class="fixed top-0 left-0">
+
+  <button data-sidebar-target="openButton" data-action="sidebar#open" class="md:hidden fixed top-6 left-4 p-2 rounded bg-pastel-violet">
+    ☰
+  </button>
+
+  <div data-sidebar-target="sidebar" class="hidden md:block z-50 w-64 h-screen bg-pastel-purple shadow-md">
+    <div class="h-24 flex items-center justify-center border-b border-black/10">
+      <%= link_to "Pawbies", root_path, class: "text-2xl font-bold font-[Pacifico]" %>
+      <button data-action="sidebar#close" class="md:hidden ml-5 p-2 rounded bg-pastel-violet">
+        ☰
+      </button>
+    </div>
+
+    <nav class="flex-1 py-4 font-[Comic_Relief]">
+      <ul class="space-y-2 px-4">
+        <li>
+          <%= link_to t(".homepage"), root_path, class: "block rounded px-3 py-2 text-xl hover:bg-pastel-violet #{'italic font-semibold bg-pastel-violet' if current_page?(root_path)}" %>
+        </li>
+        <li>
+          <%= link_to t(".users"), users_path, class: "block rounded px-3 py-2 text-xl hover:bg-pastel-violet #{'italic font-semibold bg-pastel-violet' if current_page?(users_path)}" %>
+        </li>
+      </ul>
+    </nav>
+
+    <%= form_with url: request.path, method: :get, local: true, class: "absolute bottom-2 left-1/2 transform -translate-x-1/2" do %>
+      <%= label_tag :locale, "Change language", class: "sr-only" %>
+      <%= select_tag :locale,
+        options_for_select([['🇩🇪 DE', 'de'], ['🇬🇧 EN', 'en']], I18n.locale),
+        onchange: "this.form.submit()",
+        class: "rounded border bg-pastel-cyan px-2 py-1 font-[Comic_Relief] cursor-pointer" %>
+    <% end %>
+  </div>
+</aside>
+
+

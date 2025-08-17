@@ -1,0 +1,14 @@
+de:
+  users:
+    index:
+      users: "Benutzer"
+      email: "E-Mail"
+      type: "Art"
+      actions: "Aktionen"
+      show_profile: "Anzeigen"
+      edit_profile: "Bearbeiten"
+      roles:
+        alex: "Alex"
+        bf: "Freund"
+        normal: "Normal"
+        censored: "Zensiert"

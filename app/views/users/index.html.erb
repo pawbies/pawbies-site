@@ -1,0 +1,27 @@
+<div class="mx-auto">
+  <h1 class="text-center font-semibold text-4xl lg:text-6xl font-[Pacifico]"><%= t(".users") %></h1>
+
+  <div class="mt-12 overflow-hidden rounded-2xl shadow-md shadow-pastel-purple">
+    <table class="w-full border-collapse">
+      <thead class="bg-pastel-purple text-black font-[Comic_Relief]">
+        <tr>
+          <th class="px-6 py-4 text-left text-lg font-semibold"><%= t(".email") %></th>
+          <th class="hidden lg:table-cell px-6 py-4 text-left text-lg font-semibold"><%= t(".type") %></th>
+          <th class="px-6 py-4 text-left text-lg font-semibold"><%= t(".actions") %></th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-pastel-pink/50">
+        <% @users.each_with_index do |user, i| %>
+          <tr class="<%= i.even? ? 'bg-pastel-pink/20' : '' %> hover:bg-pastel-violet/30 transition">
+            <td class="px-6 py-4 text-lg text-gray-800 break-all"><%= user.email_address %></td>
+            <td class="hidden lg:table-cell px-6 py-4 text-lg text-gray-800"><%= t(".roles.#{user.role}") %></td>
+            <td class="px-6 py-4 space-x-3">
+              <%= link_to t(".show_profile"), user, class: "my-1 inline-block rounded-lg bg-pastel-purple px-3 py-1 text-sm font-semibold text-black text-center" %>
+              <%= link_to t(".edit_profile"), edit_user_path(user), class: "my-1 inline-block rounded-lg border border-pastel-purple px-3 py-1 text-sm font-semibold text-black text-center" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

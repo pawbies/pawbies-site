@@ -4,6 +4,9 @@
       <%= link_to t(".homepage"), root_path, class: "text-2xl font-semibold #{"italic" if current_page?(root_path)}" %>
       <%= link_to t(".about"), about_path, class: "text-2xl font-semibold #{"italic" if current_page?(about_path)}" %>
       <%= link_to t(".contact"), contact_path, class: "text-2xl font-semibold #{"italic" if current_page?(contact_path)}" %>
+      <% if authenticated? && Current.user.dashboard_access? %>
+        <%= link_to "Dashboard", users_path, class: "text-2xl font-semibold" %>
+      <% end %>
   </nav>
 
   <%# Mobile %>
@@ -21,6 +24,9 @@
         <%= link_to t(".homepage"), root_path %>
         <%= link_to t(".about"), about_path %>
         <%= link_to t(".contact"), contact_path %>
+        <% if authenticated? && Current.user.dashboard_access? %>
+          <%= link_to "Dashboard", users_path %>
+        <% end %>
       </nav>
     </div>
   </div>
