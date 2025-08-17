@@ -1,15 +1,15 @@
 <header class="bg-pastel-purple w-screen h-24 font-[Comic_Relief]">
   <%# Desktop %>
-  <nav class="hidden mx-auto w-2/3 h-full md:flex items-center justify-around">
-      <%= link_to t(".homepage"), root_path, class: "text-2xl font-semibold #{"italic" if current_page?(root_path)}" %>
-      <%= link_to t(".about"), about_path, class: "text-2xl font-semibold #{"italic" if current_page?(about_path)}" %>
-      <%= link_to t(".contact"), contact_path, class: "text-2xl font-semibold #{"italic" if current_page?(contact_path)}" %>
-      <% if authenticated? %>
-      <%= link_to t(".profile"), Current.user, class: "text-2xl font-semibold #{"italic" if current_page?(user_path(Current.user))}" %>
-        <% if Current.user.dashboard_access? %>
-          <%= link_to "Dashboard", users_path, class: "text-2xl font-semibold" %>
-        <% end %>
+  <nav class="hidden mx-auto w-3/4 lg:w-2/3 h-full md:flex items-center justify-around">
+    <%= link_to t(".homepage"), root_path, class: "text-2xl font-semibold #{"italic" if current_page?(root_path)}" %>
+    <%= link_to t(".about"), about_path, class: "text-2xl font-semibold #{"italic" if current_page?(about_path)}" %>
+    <%= link_to t(".contact"), contact_path, class: "text-2xl font-semibold #{"italic" if current_page?(contact_path)}" %>
+    <% if authenticated? %>
+    <%= link_to t(".profile"), Current.user, class: "text-2xl font-semibold #{"italic" if current_page?(user_path(Current.user))}" %>
+      <% if Current.user.dashboard_access? %>
+        <%= link_to "Dashboard", users_path, class: "text-2xl font-semibold" %>
       <% end %>
+    <% end %>
   </nav>
 
   <%# Mobile %>
