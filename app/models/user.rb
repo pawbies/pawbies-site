@@ -11,4 +11,8 @@ class User < ApplicationRecord
   def dashboard_access?
     Current.user&.role == "alex" || Current.user&.role == "bf"
   end
+
+  def user_access?(id)
+    Current.user&.id == id || Current.user&.role == "alex"
+  end
 end

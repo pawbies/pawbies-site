@@ -1,0 +1,8 @@
+<div class="mx-auto">
+  <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto w-54 md:w-64 aspect-square rounded-full bg-white" %>
+  <h1 class="mt-16 text-center text-2xl lg:text-3xl"><%= @user.email_address %></h1>
+
+  <div>
+    <%= link_to t(".edit_profile"), edit_user_path(@user), class: "mt-2 text-blue-400 underline" %>
+  </div>
+</div>

@@ -12,3 +12,21 @@ de:
         bf: "Freund"
         normal: "Normal"
         censored: "Zensiert"
+
+    show:
+      profile_picture: "Profilbild"
+      edit_profile: "Profil bearbeiten"
+
+    edit:
+      profile_picture: "Profilbild"
+      email_placeholder: "Neue E-Mail Adresse"
+      update_user: "Speichern"
+      cancel: "Abbrechen"
+      delete_user: "Benutzer löschen"
+      delete_confirmation: "Sicher dass du diesen Benutzer löschen willst?"
+
+    update:
+      updated_user: "Benutzer wurde gespeichert."
+
+    destroy:
+      deleted_user: "Benutzer wurde gelöscht."

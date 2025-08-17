@@ -12,3 +12,21 @@ en:
         bf: "Boyfriend"
         normal: "Normal"
         censored: "Censored"
+
+    show:
+      profile_picture: "Profile Picture"
+      edit_profile: "Edit Profile"
+
+    edit:
+      profile_picture: "Profile Picture"
+      email_placeholder: "New email address"
+      update_user: "Update User"
+      cancel: "Cancel"
+      delete_user: "Delete User"
+      delete_confirmation: "Are you sure you want to delete this user?"
+
+    update:
+      updated_user: "User was updated."
+
+    destroy:
+      deleted_user: "User was deleted."

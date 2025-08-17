@@ -1,0 +1,13 @@
+<div class="mx-auto">
+  <%= form_with model: @user do |form| %>
+    <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto w-54 md:w-64 aspect-square rounded-full bg-white" %>
+    <%= form.email_field :email_address, required: true, placeholder: t(".email_placeholder"), class: "mt-16 text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+
+    <div class="mt-12">
+      <%= form.submit t(".update_user"), class: "w-full text-center rounded-xl px-6 py-3 bg-purple-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
+      <%= link_to t(".cancel"), @user, class: "mt-2 text-blue-400 underline" %>
+    </div>
+  <% end %>
+
+  <%= button_to t(".delete_user"), @user, data: { turbo_confirm: t(".delete_confirmation") }, method: :delete, class: "mt-32 w-full text-center rounded-xl px-6 py-3 bg-red-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
+</div>
