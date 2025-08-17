@@ -1,0 +1,11 @@
+de:
+  activerecord:
+    models:
+      user: "Benutzer"
+
+    attributes:
+      user:
+        email_address: "E-Mail Adresse"
+        firstname: "Vorname"
+        lastname: "Nachname"
+        pfp: "Profilbild"

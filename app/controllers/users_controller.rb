@@ -43,6 +43,10 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.expect(user: [ :email_address ])
+      unless Current.user&.role == "alex"
+        params.expect(user: [ :email_address, :firstname, :lastname, :pfp ])
+      else
+        params.expect(user: [ :email_address, :firstname, :lastname, :pfp, :role ])
+      end
     end
 end

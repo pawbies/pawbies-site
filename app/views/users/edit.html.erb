@@ -1,9 +1,32 @@
 <div class="mx-auto">
   <%= form_with model: @user do |form| %>
-    <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto w-54 md:w-64 aspect-square rounded-full bg-white" %>
-    <%= form.email_field :email_address, required: true, placeholder: t(".email_placeholder"), class: "mt-16 text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    <%= image_tag @user.pfp.presence || "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto border w-54 md:w-64 aspect-square rounded-full bg-white" %>
 
-    <div class="mt-12">
+    <% if @user.errors.any? %>
+      <ul class="my-5 text-red-500 text-lg">
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= form.file_field :pfp, accept: "image/png,image/jpeg,image/gif,image/webp", class: "mt-16 text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    <%= form.text_field :firstname, required: true, placeholder: t(".firstname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    <%= form.text_field :lastname, required: true, placeholder: t(".lastname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    <%= form.email_field :email_address, required: true, placeholder: t(".email_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+
+    <% if Current.user&.role == "alex" %>
+    <div class="my-12">
+      <%= form.collection_radio_buttons :role, User.roles.keys, :to_s, ->(r) { I18n.t("enums.user.role.#{r}") } do |b| %>
+        <div class="flex items-center space-x-3 mb-3">
+          <%= b.radio_button(class: "h-5 w-5 text-pastel-purple focus:ring-pastel-blue") %>
+          <%= b.label(class: "text-lg font-[Comic_Relief] cursor-pointer") %>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+
+    <div>
       <%= form.submit t(".update_user"), class: "w-full text-center rounded-xl px-6 py-3 bg-purple-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
       <%= link_to t(".cancel"), @user, class: "mt-2 text-blue-400 underline" %>
     </div>

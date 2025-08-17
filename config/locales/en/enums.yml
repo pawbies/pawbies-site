@@ -1,0 +1,8 @@
+en:
+  enums:
+    user:
+      role:
+        normal: "Normal"
+        censored: "Censored"
+        bf: "Boyfriend"
+        alex: "Alex"
