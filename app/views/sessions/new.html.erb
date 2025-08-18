@@ -1,7 +1,12 @@
 <div class="mx-auto">
   <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]">Login</h1>
 
-  <%= form_with url: session_url, class: "mt-18 mx-auto md:w-2/3" do |form| %>
+  <div class="my-18 flex flex-col items-center">
+    <%= image_tag "ai/login.webp", alt: t(".anime_login_alt"), width: 1024, height: 1024, class: "aspect-square w-2/3 md:w-1/2 lg:w-1/3 rounded-md border" %>
+    <p><%= t(".ai_apology") %></p>
+  </div>
+
+  <%= form_with url: session_url, class: "mx-auto md:w-2/3" do |form| %>
     <div class="my-5">
       <%= form.email_field :email_address,
         required: true,

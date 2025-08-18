@@ -8,6 +8,8 @@ en:
       sign_in: "Sign in"
       forgot_password: "Forgot password?"
       no_account: "Not signed up yet?"
+      anime_login_alt: "Anime femboy begging for you to log in"
+      ai_apology: "I'm sorry for using AI images 😭"
 
     create:
       try_another_email: "Try another email address or password."
