@@ -8,3 +8,5 @@ en:
         email_address: "Email address"
         firstname: "Firstname"
         lastname: "Lastname"
+        password: "Password"
+        password_confirmation: "Passwort Confirmation"

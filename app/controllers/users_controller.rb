@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  allow_unauthenticated_access only: %i[ new create ]
   before_action :require_dashboard_access, only: :index
   before_action :require_user_access, only: %i[ show edit update destroy ]
   before_action :set_user, only: %i[ show edit update destroy ]
@@ -6,6 +7,20 @@ class UsersController < ApplicationController
 
   def index
     @users = User.order(role: :desc)
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(**user_params, role: "normal")
+    if @user.save
+      start_new_session_for @user
+      redirect_to root_path, notice: t(".success", firstname: @user.firstname)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -43,10 +58,10 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      unless Current.user&.role == "alex"
-        params.expect(user: [ :email_address, :firstname, :lastname ])
+      if authenticated? && Current.user.role == "alex"
+        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation ])
       else
-        params.expect(user: [ :email_address, :firstname, :lastname, :role ])
+        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation, :role ])
       end
     end
 end

@@ -12,12 +12,26 @@ en:
         bf: "Boyfriend"
         normal: "Normal"
 
+    new:
+      sign_up: "Sign up"
+      email_placeholder: "Your email address"
+      firstname_placeholder: "Your firstname"
+      lastname_placeholder: "Your lastname"
+      password_placeholder: "Your password"
+      password_confirmation_placeholder: "Repeat your password"
+      sign_in_instead: "Sign in instead?"
+
+    create:
+      success: "Yaaayyyyy!!!! Welcome %{firstname}, I'm happy to have you here 😀."
+
     show:
       profile_picture: "Profile Picture"
       edit_profile: "Edit Profile"
 
     edit:
       profile_picture: "Profile Picture"
+      firstname_placeholder: "New firstname"
+      lastname_placeholder: "New lastname"
       email_placeholder: "New email address"
       update_user: "Update User"
       cancel: "Cancel"

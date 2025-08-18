@@ -7,7 +7,7 @@ de:
       too_long: " ist zu lang (maximum ist %{count} Zeichen)."
       taken: " ist bereits vergeben."
       not_a_number: " ist keine Zahl."
-      confirmation: " stimmt nicht mit der Bestätigung überein."
+      confirmation: " stimmt nicht überein."
       accepted: " muss akzeptiert werden."
       greater_than: " muss größer als %{count} sein."
       less_than: " muss kleiner als %{count} sein."

@@ -10,9 +10,15 @@
       </ul>
     <% end %>
 
-    <%= form.text_field :firstname, required: true, placeholder: t(".firstname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
-    <%= form.text_field :lastname, required: true, placeholder: t(".lastname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
-    <%= form.email_field :email_address, required: true, placeholder: t(".email_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    <div class="my-5">
+      <%= form.text_field :firstname, required: true, autocomplete: "given-name", placeholder: t(".firstname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+    <div class="my-5">
+      <%= form.text_field :lastname, required: true, autocomplete: "family-name", placeholder: t(".lastname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+    <div class="my-5">
+      <%= form.email_field :email_address, required: true, autocomplete: "username", placeholder: t(".email_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
 
     <% if Current.user&.role == "alex" %>
     <div class="my-12">

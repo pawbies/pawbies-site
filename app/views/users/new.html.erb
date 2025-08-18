@@ -1,0 +1,66 @@
+<div class="mx-auto">
+  <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]"><%= t(".sign_up") %></h1>
+
+  <%= form_with model: @user, class: "mt-18 mx-auto md:w-2/3" do |form| %>
+    <% if @user.errors.any? %>
+      <ul class="my-5 text-red-500 text-lg">
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <div class="my-5">
+      <%= form.email_field :email_address,
+        required: true,
+        autofocus: true,
+        autocomplete: "username",
+        placeholder: t(".email_placeholder"),
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.text_field :firstname,
+        required: true,
+        autocomplete: "given-name",
+        placeholder: t(".firstname_placeholder"),
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.text_field :lastname,
+        required: true,
+        autocomplete: "family-name",
+        placeholder: t(".lastname_placeholder"),
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.password_field :password,
+        required: true,
+        autocomplete: "new-password",
+        placeholder: t(".password_placeholder"),
+        maxlength: 72,
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="my-5">
+      <%= form.password_field :password_confirmation,
+        required: true,
+        autocomplete: "new-password",
+        placeholder: t(".password_confirmation_placeholder"),
+        maxlength: 72,
+        class: "block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full text-lg drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
+
+    <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+      <div class="inline">
+        <%= form.submit t(".sign_up"), class: "w-full sm:w-auto text-center rounded-xl px-6 py-3 bg-purple-400 text-white font-semibold cursor-pointer drop-shadow-md drop-shadow-pastel-purple" %>
+      </div>
+
+      <div class="mt-4 text-sm text-gray-500 sm:mt-0">
+        <%= link_to t(".sign_in_instead"), new_session_path, class: "text-blue-400 underline" %>
+      </div>
+    </div>
+  <% end %>
+</div>

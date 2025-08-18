@@ -12,12 +12,26 @@ de:
         bf: "Freund"
         normal: "Normal"
 
+    new:
+      sign_up: "Registrieren"
+      email_placeholder: "Deine E-Mail Adresse"
+      firstname_placeholder: "Dein Vorname"
+      lastname_placeholder: "Dein Nachname"
+      password_placeholder: "Dein Passwort"
+      password_confirmation_placeholder: "Wiederhole dein Passwort"
+      sign_in_instead: "Doch lieber anmelden?"
+
+    create:
+      success: "Yaaayyyyy!!!! Willkommen %{firstname}, bin froh dich hier zu haben 😀."
+
     show:
       profile_picture: "Profilbild"
       edit_profile: "Profil bearbeiten"
 
     edit:
       profile_picture: "Profilbild"
+      firstname_placeholder: "Neuer Vorname"
+      lastname_placeholder: "Neuer Nachname"
       email_placeholder: "Neue E-Mail Adresse"
       update_user: "Speichern"
       cancel: "Abbrechen"

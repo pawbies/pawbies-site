@@ -7,7 +7,7 @@ class PasswordsController < ApplicationController
 
   def create
     if user = User.find_by(email_address: params[:email_address])
-      PasswordsMailer.reset(user).deliver_later
+      PasswordsMailer.reset(user).deliver_now # cant use deliver_later because it requires a worker process and im not paying for that on heroku
     end
 
     redirect_to new_session_path, notice: t(".password_reset_instructions_sent")

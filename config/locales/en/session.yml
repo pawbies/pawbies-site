@@ -7,6 +7,7 @@ en:
       password_placeholder: "Enter your password"
       sign_in: "Sign in"
       forgot_password: "Forgot password?"
+      no_account: "Not signed up yet?"
 
     create:
       try_another_email: "Try another email address or password."
