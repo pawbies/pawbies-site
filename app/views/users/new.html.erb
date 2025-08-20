@@ -1,7 +1,12 @@
 <div class="mx-auto">
   <h1 class="font-semibold text-4xl lg:text-6xl lg:text-center font-[Pacifico]"><%= t(".sign_up") %></h1>
+  <p class="my-18 text-center">
+    <q class="text-lg">When you come to a fork in the road, take it.</q>
+    <br>
+    <small>- Yogi Berra</small>
+  </p>
 
-  <%= form_with model: @user, class: "mt-18 mx-auto md:w-2/3" do |form| %>
+  <%= form_with model: @user, class: "mx-auto md:w-2/3" do |form| %>
     <% if @user.errors.any? %>
       <ul class="my-5 text-red-500 text-lg">
         <% @user.errors.full_messages.each do |error| %>
