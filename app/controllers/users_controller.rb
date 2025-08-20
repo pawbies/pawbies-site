@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(**user_params, role: "normal")
+    @user = User.new(**user_params, email_verified: false, role: "normal")
     if @user.save
       start_new_session_for @user
       redirect_to root_path, notice: t(".success", firstname: @user.firstname)
