@@ -1,3 +1,10 @@
 de:
   email_verifications:
     link_was_invalid: "Der Link ist ungültig, vielleicht hat die E-Mail sich inzwischen geändert."
+
+    create:
+      mail_sent: "Du solltest in kürze eine E-Mail mit der Anleitung bekommen."
+
+    update:
+      success: "Deine E-Mail ist jetzt verifiziert."
+      error: "Etwas ist schiefgelaufen."

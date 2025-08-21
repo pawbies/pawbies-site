@@ -1,0 +1,2 @@
+<%= t(".body_txt", name: @user.full_name) %>
+<%= update_email_verification_url(token: @user.generate_token_for(:email_verification)) %>

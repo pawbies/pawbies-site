@@ -1,3 +1,10 @@
 en:
   email_verifications:
     link_was_invalid: "Link was invalid, maybe the email changed in the meantime."
+
+    create:
+      mail_sent: "You should receive a mail with instructions in a bit."
+
+    update:
+      success: "Your email is now verified."
+      error: "Something went wrong."

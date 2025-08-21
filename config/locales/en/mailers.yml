@@ -10,3 +10,10 @@ en:
       body_html: "You can reset your password within the next 15 minutes on %{link}."
       link_text: "this password reset page"
       body_txt: "You can reset your password within the next 15 minutes on this password reset page:"
+
+  email_verifications_mailer:
+    verify:
+      subject: "Verify your email"
+      body_html: "Hello %{name}, you can verify your email %{link}."
+      link_text: "with this link"
+      body_txt: "Hello %{name}, you can verify your email with this link:"

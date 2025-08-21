@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get "email_verifications/create"
-  get "email_verifications/update"
-  resources :email_verifications, param: :token
+  post "email_verification/:user_id" => "email_verifications#create", as: :email_verification
+  get "email_verification/:token" => "email_verifications#update", as: :update_email_verification
   resource :session
   resources :passwords, param: :token
   resources :users

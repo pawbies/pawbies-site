@@ -1,4 +1,12 @@
 <div class="mx-auto flex flex-col items-center">
+
+  <% unless @user.email_verified %>
+    <div class="text-center mb-12 mx-auto w-64 p-3 bg-pastel-violet flex flex-col items-center rounded-xl">
+      <p class="mb-4"><%= t(".your_email_is_not_verified") %></p>
+      <%= button_to t(".verify_now"), email_verification_path(@user), class: "my-1 inline-block rounded-lg bg-pastel-purple px-3 py-1 text-sm font-semibold text-black text-center" %>
+    </div>
+  <% end %>
+
   <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto w-54 border md:w-64 aspect-square rounded-full bg-white" %>
   <h1 class="mt-16 text-center text-2xl lg:text-3xl"><%= @user.full_name %></h1>
 

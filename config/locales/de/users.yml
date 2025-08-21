@@ -25,6 +25,8 @@ de:
       success: "Yaaayyyyy!!!! Willkommen %{firstname}, bin froh dich hier zu haben 😀."
 
     show:
+      your_email_is_not_verified: "Deine E-Mail ist nicht verifiziert"
+      verify_now: "Jetzt verifizieren"
       profile_picture: "Profilbild"
       edit_profile: "Profil bearbeiten"
 

@@ -9,3 +9,10 @@ de:
       body_html: "Du kannst dein Passwort in den nächsten 15 minuten auf %{link} ändern."
       link_text: "dieser Seite"
       body_txt: "Du kannst dein Passwort in den nächsten 15 minuten auf dieser Seite ändern:"
+
+  email_verifications_mailer:
+    verify:
+      subject: "Verifiziere deine E-Mail"
+      body_html: "Hallo %{name}, du kannst deine E-Mail  %{link} verifizieren."
+      link_text: "mit diesem Link"
+      body_txt: "Hallo %{name}, du kannst deine E-Mail mit diesem Link verifizieren:"
