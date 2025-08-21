@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       start_new_session_for @user
       redirect_to root_path, notice: t(".success", firstname: @user.firstname)
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, notice: t(".updated_user")
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_content
     end
   end
 
