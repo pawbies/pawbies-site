@@ -19,6 +19,10 @@ class User < ApplicationRecord
     Current.user&.id == id || Current.user&.role == "alex"
   end
 
+  generates_token_for(:email_verification) do
+    email_address
+  end
+
   def full_name
     "#{firstname} #{lastname}"
   end
