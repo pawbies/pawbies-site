@@ -1,7 +1,5 @@
 <div class="mx-auto">
   <%= form_with model: @user do |form| %>
-    <%= image_tag "default/pfp.svg", alt: t(".profile_picture"), class: "mx-auto border w-54 md:w-64 aspect-square rounded-full bg-white" %>
-
     <% if @user.errors.any? %>
       <ul class="my-5 text-red-500 text-lg">
         <% @user.errors.full_messages.each do |error| %>
@@ -10,6 +8,9 @@
       </ul>
     <% end %>
 
+    <div class="my-5">
+      <%= form.file_field :pfp, accept: "image/png,image/jpg,image/jpeg,image/gif,image/webp", class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
+    </div>
     <div class="my-5">
       <%= form.text_field :firstname, required: true, autocomplete: "given-name", placeholder: t(".firstname_placeholder"), class: "text-2xl lg:text-3xl block rounded-xl focus:border-pastel-blue bg-white px-4 py-3 mt-2 w-full drop-shadow-md drop-shadow-pastel-purple" %>
     </div>

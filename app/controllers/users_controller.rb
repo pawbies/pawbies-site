@@ -59,9 +59,9 @@ class UsersController < ApplicationController
 
     def user_params
       if authenticated? && Current.user.role == "alex"
-        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation ])
+        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation, :pfp ])
       else
-        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation, :role ])
+        params.expect(user: [ :email_address, :firstname, :lastname, :password, :password_confirmation, :pfp, :role ])
       end
     end
 end

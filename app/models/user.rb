@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :email_address, presence: true, uniqueness: true
   validates :firstname, presence: true, length: { maximum: 50 }
   validates :lastname, presence: true, length: { maximum: 50 }
-  validate :valid_pfp
+  validates :pfp, content_type: { in: %w[image/png image/jpeg image/gif image/webp] }, size: { less_than: 5.megabytes }
 
   enum :role, { normal: 0, bf: 2, alex: 3 }
 
@@ -29,8 +29,4 @@ class User < ApplicationRecord
   def full_name
     "#{firstname} #{lastname}"
   end
-
-  private
-    def valid_pfp
-    end
 end
